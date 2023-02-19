@@ -27,7 +27,7 @@ public class OcrController {
             BufferedImage image = ImageIO.read(file.getInputStream());
             Tesseract tesseract = new Tesseract();
 
-            tesseract.setDatapath("/usr/share/tesseract-ocr/4.00/tessdata");
+            tesseract.setDatapath("src/main/resources/tessdata");
             tesseract.setLanguage("eng");
 
             result = tesseract.doOCR(image);
